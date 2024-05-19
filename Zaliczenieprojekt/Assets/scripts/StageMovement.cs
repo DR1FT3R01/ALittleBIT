@@ -18,3 +18,6 @@ public class StageMovement : MonoBehaviour
         transform.position = new Vector3(-50, 0, 5);
     }
 }
+
+//TODO zoptymalizowac predosc platform do ich miejsca respienia w grze
+
