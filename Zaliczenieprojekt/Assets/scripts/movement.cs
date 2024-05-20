@@ -11,14 +11,15 @@ public class movement : MonoBehaviour
     private bool isMoving = false;
     public float speed;
     public float speedY;
-    //public float GridSize = 5f;
-    //public float GridLimit = 15f;
+    //public Vector2 BounceVector;
+    public float gridSize = 3f;
+    private Vector3 gridOrigin = Vector3.zero;
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.RightArrow) && !isMoving)
         {
-            StartMove(Vector3.forward + new Vector3(0,0,speed));
+            StartMove(Vector3.forward + new Vector3(0, 0, speed));
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) && !isMoving)
         {
@@ -35,9 +36,18 @@ public class movement : MonoBehaviour
 
         if (isMoving)
         {
-            PerformMove();  
+            PerformMove();
         }
 
+    }
+
+    void TryMove(Vector3 direction)
+    {
+        Vector3 newPosition = transform.position + direction;
+        if (Mathf.Abs(newPosition.x - gridOrigin.x) <= gridSize && Mathf.Abs(newPosition.y - gridOrigin.y) <= gridSize)
+        {
+            StartMove(direction);
+        }
     }
 
     void StartMove(Vector3 targetVector)
@@ -61,13 +71,11 @@ public class movement : MonoBehaviour
         }
     }
 
-    void OnGUI()
-    {
-        
-    }
+    
 
 
-
+    //TODO zrobic ontriggerenter na sciane zeby sie platformy respily zamiast tego ze kamera nie widzi
+    // zrobic takie same triggery na granice ruchu kostki
 
     //do zrobienia jeszcze zeby nie wychodzilo poza siatke
     /*metoda na  znikajaca platformy

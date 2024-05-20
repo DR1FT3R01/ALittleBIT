@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class StageMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
-
+    public float speed = 50.0f;
 
 
     void Update()
@@ -13,9 +12,9 @@ public class StageMovement : MonoBehaviour
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
-    void OnBecameInvisible()
+    private void OnTriggerEnter()
     {
-        transform.position = new Vector3(-50, 0, 5);
+        transform.position = new Vector3(-70, 0, 5);
     }
 }
 
