@@ -6,7 +6,7 @@ public class StageMovement : MonoBehaviour
 {
     public float speed = 50.0f;
 
-    
+
 
     void Update()
     {
