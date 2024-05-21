@@ -6,16 +6,22 @@ public class StageMovement : MonoBehaviour
 {
     public float speed = 50.0f;
 
+    
 
     void Update()
     {
         transform.Translate(Vector3.right * speed * Time.deltaTime);
     }
 
-    private void OnTriggerEnter()
+    void OnTriggerEnter(Collider other)
     {
-        transform.position = new Vector3(-70, 0, 5);
+        if (other.gameObject.tag == "Respawn")
+        {
+            transform.position = new Vector3(-70, 0, 5);
+        }
+        
     }
+    
 }
 
 //TODO zoptymalizowac predosc platform do ich miejsca respienia w grze

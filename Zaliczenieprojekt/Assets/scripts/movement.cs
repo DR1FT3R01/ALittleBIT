@@ -11,9 +11,8 @@ public class movement : MonoBehaviour
     private bool isMoving = false;
     public float speed;
     public float speedY;
-    //public Vector2 BounceVector;
-    public float gridSize = 3f;
-    private Vector3 gridOrigin = Vector3.zero;
+    public Vector2 BounceVector;
+    
 
     void Update()
     {
@@ -41,14 +40,6 @@ public class movement : MonoBehaviour
 
     }
 
-    void TryMove(Vector3 direction)
-    {
-        Vector3 newPosition = transform.position + direction;
-        if (Mathf.Abs(newPosition.x - gridOrigin.x) <= gridSize && Mathf.Abs(newPosition.y - gridOrigin.y) <= gridSize)
-        {
-            StartMove(direction);
-        }
-    }
 
     void StartMove(Vector3 targetVector)
     {
@@ -71,6 +62,10 @@ public class movement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        other.transform.Translate(BounceVector);
+    }
     
 
 
