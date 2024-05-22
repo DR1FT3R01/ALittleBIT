@@ -13,7 +13,6 @@ public class ObstacleMovement : MonoBehaviour
 
         if (transform.position.x > deadZone)
         {
-            Debug.Log("ObstacleDestroyed");
             Destroy(gameObject);
         }
     }

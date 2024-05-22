@@ -362,9 +362,11 @@
 -analyzer:"D:/Programy/Unity/2022.3.26f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"D:/Programy/Unity/2022.3.26f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/backup/Jump.cs"
+"Assets/scripts/LogicScript.cs"
 "Assets/scripts/movement.cs"
 "Assets/scripts/ObstacleMovement.cs"
 "Assets/scripts/ObstaclesSpawnerScript.cs"
+"Assets/scripts/ScoreTriggerScript.cs"
 "Assets/scripts/StageMovement.cs"
 -langversion:9.0
 /deterministic
