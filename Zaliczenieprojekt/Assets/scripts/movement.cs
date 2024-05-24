@@ -11,7 +11,7 @@ public class movement : MonoBehaviour
     private bool isMoving = false;
     public float speed;
     public float speedY;
-    public Vector2 BounceVector;
+    //public Vector2 BounceVector;
     
 
     void Update()
@@ -62,11 +62,15 @@ public class movement : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        other.transform.Translate(BounceVector);
+        if (other.gameObject.tag == "Border")
+        {
+            Debug.Log("BoarderScript");
+            transform.position = new Vector3(25, 15, 5);
+            //return;
+        }
     }
-    
 
 
     //TODO zrobic ontriggerenter na sciane zeby sie platformy respily zamiast tego ze kamera nie widzi
