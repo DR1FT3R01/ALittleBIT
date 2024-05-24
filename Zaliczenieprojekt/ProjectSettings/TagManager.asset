@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ground
   - Stage
+  - Logic
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
