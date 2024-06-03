@@ -11,7 +11,6 @@ public class movement : MonoBehaviour
     private bool isMoving = false;
     public float speed;
     public float speedY;
-    //public Vector2 BounceVector;
     
 
     void Update()
@@ -43,10 +42,14 @@ public class movement : MonoBehaviour
 
     void StartMove(Vector3 targetVector)
     {
-        startPosition = transform.position;
-        endPosition = startPosition + targetVector; 
-        elapsedTime = 0.0f;
-        isMoving = true;
+        RaycastHit hit;
+        if (!Physics.Raycast(transform.position, targetVector, out hit, targetVector.magnitude))
+        {
+            startPosition = transform.position;
+            endPosition = startPosition + targetVector;
+            elapsedTime = 0.0f;
+            isMoving = true;
+        }
     }
 
     void PerformMove()
@@ -66,9 +69,7 @@ public class movement : MonoBehaviour
     {
         if (other.gameObject.tag == "Border")
         {
-            Debug.Log("BoarderScript");
-            transform.position = new Vector3(25, 15, 5);
-            //return;
+            Debug.Log("is touching");
         }
     }
 

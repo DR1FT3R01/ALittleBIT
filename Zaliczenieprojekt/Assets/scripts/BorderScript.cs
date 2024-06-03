@@ -8,11 +8,7 @@ public class BorderScript : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            Debug.Log("BoarderScript");
-            other.gameObject.transform.position = new Vector3(25, 15, 5);
-            return;
+            Debug.Log("is touching");
         }
     }
-
-    
 }
