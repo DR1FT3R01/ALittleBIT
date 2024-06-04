@@ -17,7 +17,7 @@ public class StageMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "Respawn")
         {
-            transform.position = new Vector3(-100, 0, 5);
+            transform.position = new Vector3(-900, 0, 5);
         }
         
     }
