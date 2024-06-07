@@ -372,6 +372,8 @@
 "Assets/scripts/movement.cs"
 "Assets/scripts/ObstacleMovement.cs"
 "Assets/scripts/ObstaclesSpawnerScript.cs"
+"Assets/scripts/PlatformMovementScript.cs"
+"Assets/scripts/PlatformSpawnerScript.cs"
 "Assets/scripts/ScoreTriggerScript.cs"
 "Assets/scripts/StageMovement.cs"
 -langversion:9.0

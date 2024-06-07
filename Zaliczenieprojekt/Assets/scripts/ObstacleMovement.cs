@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObstacleMovement : MonoBehaviour
 {
-    public float moveSpeed = 5;
+    public float moveSpeed = 100;
     public float deadZone = 85;
 
     private void Update()
