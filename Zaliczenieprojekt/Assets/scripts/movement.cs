@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class movement : MonoBehaviour
@@ -11,7 +13,13 @@ public class movement : MonoBehaviour
     private bool isMoving = false;
     public float speed;
     public float speedY;
-    
+
+    public LogicScript logic;
+
+    private void Start()
+    {
+        logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+    }
 
     void Update()
     {
@@ -37,7 +45,7 @@ public class movement : MonoBehaviour
             PerformMove();
         }
 
-    }
+}
 
 
     void StartMove(Vector3 targetVector)
@@ -82,9 +90,11 @@ public class movement : MonoBehaviour
      onbecomevisible
      onbecomeinvisible*/
 
-
-
-
+    private void OnCollisionEnter(Collision collision)
+    {
+        logic.gameOver();
+        Debug.Log("Obstacle collision");
+    }
 
 }
 
