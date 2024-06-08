@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlatformSpawnerScript : MonoBehaviour
 {
     public List<GameObject> platformToSpawn;
-    //public GameObject obstacleVariant;
+    //public GameObject platformVariant;
     public float spawnRate = 2;
     private float timer;
     public bool alwaysSpawn = true;
@@ -28,12 +28,12 @@ public class PlatformSpawnerScript : MonoBehaviour
     }
     void spawnPlatform()
     {
-        //int randomObstacleVariant = Random.Range(0, obstaclesToSpawn.Count);
+        int randomPlatformVariant = Random.Range(0, platformToSpawn.Count);
         int obstacleVariant = 0;
 
         if (alwaysSpawn)
         {
-            GameObject platformVariant = platformToSpawn[obstacleVariant];
+            GameObject platformVariant = platformToSpawn[randomPlatformVariant];
             Instantiate(platformVariant, transform.position, transform.rotation);
         }
     }
