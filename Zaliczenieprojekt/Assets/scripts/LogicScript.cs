@@ -10,6 +10,10 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public TextMeshProUGUI scoreText;
     public GameObject gameOverScreen;
+    public GameObject PauseMenuScreen;
+
+    public bool isPaused;
+    public bool isGameOver;
 
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
@@ -21,27 +25,44 @@ public class LogicScript : MonoBehaviour
     //Restart Game
     public void restartGame()
     {
-        Debug.Log("click");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        resumeGame();
+        Time.timeScale = 1;
     }
 
     //Game Over
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
-        pauseGame();
+        Time.timeScale = 0;
+        isGameOver = true;
+    }
+
+    //Game Menu
+    public void gameMenu()
+    {
+        if (isPaused)
+        {
+            resumeGame();
+        }
+        else
+        {
+            pauseGame();
+        }
     }
 
     //Pause and Continue
 
     public void pauseGame()
     {
+        PauseMenuScreen.SetActive(true);
         Time.timeScale = 0;
+        isPaused = true;
     }
 
     public void resumeGame()
     {
+        PauseMenuScreen.SetActive(false);
         Time.timeScale = 1;
+        isPaused = false;
     }
 }
