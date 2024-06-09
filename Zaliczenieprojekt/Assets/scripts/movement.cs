@@ -73,11 +73,12 @@ public class movement : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider trigger)
     {
-        if (other.gameObject.tag == "Border")
+        if (trigger.gameObject.tag == "Obstacle")
         {
-            Debug.Log("is touching");
+            logic.gameOver();
+            Debug.Log("Obstacle collision");
         }
     }
 
@@ -89,12 +90,6 @@ public class movement : MonoBehaviour
     /*metoda na  znikajaca platformy
      onbecomevisible
      onbecomeinvisible*/
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        logic.gameOver();
-        Debug.Log("Obstacle collision");
-    }
 
 }
 

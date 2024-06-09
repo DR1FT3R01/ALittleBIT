@@ -18,14 +18,30 @@ public class LogicScript : MonoBehaviour
         scoreText.text = "Score: " + playerScore.ToString();
     }
 
+    //Restart Game
     public void restartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         Debug.Log("click");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        resumeGame();
     }
 
+    //Game Over
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
+        pauseGame();
+    }
+
+    //Pause and Continue
+
+    public void pauseGame()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void resumeGame()
+    {
+        Time.timeScale = 1;
     }
 }
