@@ -29,7 +29,7 @@ public class PlatformSpawnerScript : MonoBehaviour
     void spawnPlatform()
     {
         int randomPlatformVariant = Random.Range(0, platformToSpawn.Count);
-        int obstacleVariant = 0;
+        //int obstacleVariant = 0;
 
         if (alwaysSpawn)
         {
