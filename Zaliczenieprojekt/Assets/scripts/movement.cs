@@ -23,19 +23,19 @@ public class movement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && !isMoving && !logic.isPaused)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && !isMoving)
         {
             StartMove(Vector3.forward + new Vector3(0, 0, speed));
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isMoving && !logic.isPaused)
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && !isMoving)
         {
             StartMove(-Vector3.forward + new Vector3(0, 0, -speed));
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !isMoving && !logic.isPaused)
+        if (Input.GetKeyDown(KeyCode.UpArrow) && !isMoving)
         {
             StartMove(Vector3.forward + new Vector3(0, speedY, -1));
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && !isMoving && !logic.isPaused)
+        if (Input.GetKeyDown(KeyCode.DownArrow) && !isMoving)
         {
             StartMove(-Vector3.forward + new Vector3(0, -speedY, 1));
         }
@@ -43,20 +43,6 @@ public class movement : MonoBehaviour
         if (isMoving)
         {
             PerformMove();
-        }
-
-        //PauseGame - GameMenu
-
-        if (Input.GetKeyDown(KeyCode.Escape) && !logic.isGameOver)
-        {
-            logic.gameMenu();
-        }
-
-        //RestartGame - GameOver
-
-        if (Input.GetKeyDown(KeyCode.Return) && logic.isGameOver)
-        { 
-            logic.restartGame();
         }
 
 }

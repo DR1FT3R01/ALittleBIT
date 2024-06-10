@@ -19,7 +19,11 @@ MonoBehaviour:
     width: 1536
     height: 820.8
   m_ShowMode: 4
+<<<<<<< HEAD
   m_Title: Console
+=======
+  m_Title: Inspector
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +123,11 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
+<<<<<<< HEAD
   controlID: 91
+=======
+  controlID: 103
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -188,7 +196,11 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 184
+<<<<<<< HEAD
     height: 514.4
+=======
+    height: 482.4
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
@@ -233,7 +245,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -241,16 +253,28 @@ MonoBehaviour:
     x: 0
     y: 514.4
     width: 1248.8
+<<<<<<< HEAD
     height: 256.39996
   m_MinSize: {x: 101, y: 121}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 17}
+=======
+    height: 240.4
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 15}
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
   m_Panes:
   - {fileID: 15}
   - {fileID: 17}
   - {fileID: 16}
+<<<<<<< HEAD
   m_Selected: 1
   m_LastSelected: 0
+=======
+  m_Selected: 0
+  m_LastSelected: 1
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,7 +293,11 @@ MonoBehaviour:
     x: 1248.8
     y: 0
     width: 287.19995
+<<<<<<< HEAD
     height: 770.8
+=======
+    height: 722.8
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
   m_MinSize: {x: 276, y: 71}
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 18}
@@ -657,7 +685,11 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: 0.15227324, y: -0.3253964, z: 0.05318038, w: 0.93172085}
     speed: 2
+<<<<<<< HEAD
     m_Value: {x: -0.15227324, y: 0.3253964, z: -0.05318038, w: -0.93172085}
+=======
+    m_Value: {x: -0, y: 0, z: -0, w: -1}
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
   m_Size:
     m_Target: 6.9282055
     speed: 2
@@ -723,9 +755,15 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
       m_ExpandedIDs: 3cfbffff
+=======
+      m_SelectedIDs: ea610000
+      m_LastClickedID: 25066
+      m_ExpandedIDs: 0efbffff
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -907,9 +945,15 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 76.600006}
+<<<<<<< HEAD
     m_SelectedIDs: 80640000
     m_LastClickedID: 25728
     m_ExpandedIDs: 000000008064000000ca9a3bffffff7f
+=======
+    m_SelectedIDs: f2660000
+    m_LastClickedID: 26354
+    m_ExpandedIDs: 00000000d066000000ca9a3b
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -964,7 +1008,11 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
     m_HadKeyboardFocusLastEvent: 0
+=======
+    m_HadKeyboardFocusLastEvent: 1
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
     m_ExpandedInstanceIDs: c623000014a4000048a30000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1052,10 +1100,17 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 76.600006}
     m_SelectedIDs: 2a690000
     m_LastClickedID: 26922
     m_ExpandedIDs: 0000000080640000
+=======
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: e2660000
+    m_LastClickedID: 26338
+    m_ExpandedIDs: 00000000d0660000
+>>>>>>> parent of cc63fb0b (GameOver and PauseMenu work)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1108,8 +1163,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 58150000
-    m_LastClickedInstanceID: 5464
+    m_SelectedInstanceIDs: 869affff
+    m_LastClickedInstanceID: -25978
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: cea30000
     m_RenameOverlay:
